@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комунальні витрати</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Облік комунальних витрат</h1>
+
+    <div class="form">
+        <input type="date" id="date">
+        <input type="number" id="water" placeholder="Вода">
+        <input type="number" id="gas" placeholder="Газ">
+        <input type="number" id="electricity" placeholder="Світло">
+        <button onclick="addRecord()">Додати запис</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Дата</th>
+                <th>Вода</th>
+                <th>Газ</th>
+                <th>Світло</th>
+                <th>Витрата води</th>
+                <th>Витрата газу</th>
+                <th>Витрата світла</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <button class="clear" onclick="clearAll()">Очистити все</button>
+
+    <div class="charts">
+        <canvas id="waterChart"></canvas>
+        <canvas id="gasChart"></canvas>
+        <canvas id="electricityChart"></canvas>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
